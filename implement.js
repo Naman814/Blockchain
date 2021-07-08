@@ -26,6 +26,7 @@ class Block{
 class Blockchain{
     constructor(){
         this.chain= [this.createGenesisBlock()];  //initialized array with the first block that is called the genesis block
+        this.difficulty=4; //difficulty is the additional computational power to verify transaction entered on blockchain
     }
 
     createGenesisBlock(){
@@ -38,7 +39,7 @@ class Blockchain{
 
     addBlock(newBlock){
         newBlock.previousHash=this.getLatestBlock().hash;    // assigning the previous block hash to newly created block 
-        newBlock.hash=newBlock.calculateHashCode();
+        newBlock.mineBlock(this.difficulty);
         this.chain.push(newBlock);
     }
 
@@ -63,16 +64,8 @@ class Blockchain{
 }
 
 let coin=new Blockchain();
+console.log("Mining block 1..")
 coin.addBlock(new Block(1 , "9/07/2021" , {amount : 2}));
+console.log("Mining Block 2..")
 coin.addBlock(new Block(2 , "11/07/2021" , {amount : 5}));
 
-
-console.log("Is blockchain valid ? "+ coin.isValid());
-
-// making changes in the second block
-coin.chain[1].data={amount : 4};   
-//valid status turns to false
-console.log("Is blockchain valid ? "+ coin.isValid());
-
-
-console.log(JSON.stringify(coin , null , 4));
