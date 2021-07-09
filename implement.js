@@ -65,7 +65,9 @@ class Blockchain{
 
 let coin=new Blockchain();
 console.log("Mining block 1..")
-coin.addBlock(new Block(1 , "9/07/2021" , {amount : 2}));
+coin.addBlock(new Block(1 , "9/07/2021" , { Name: 'Rahul' , phLevel: '7' ,  moistureLevel: '35'}));
 console.log("Mining Block 2..")
-coin.addBlock(new Block(2 , "11/07/2021" , {amount : 5}));
+coin.addBlock(new Block(2 , "11/07/2021" , {Name :  'Ajay' , phLevel:'3' , moistureLevel: '72'}));
+
+console.log(JSON.stringify(coin , null , 5));
 
