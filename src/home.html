@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #D9F8C4;
+        }
+        h1{
+            font-size: 50px;
+        }
+        #wrapper{
+            display: flex; 
+            justify-content: center;
+            flex-direction: column;
+        }
+        h1{
+            flex:1;
+            text-align: center;
+        }
+        #container{
+            display:flex;
+            justify-content: space-around;
+            flex:1;
+            align-items: center;
+            margin-top: 100px;
+        }
+        #left{
+            display: flex;
+            flex-direction: column;
+          
+        }
+        #right{
+            display:flex;
+            flex-direction: column;
+         
+        }
+        button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 30px;
+            margin: 10px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            
+        }
+
+        button {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+    <h1>PATIENTS DATA</h1>
+    <div id="container">
+
+        <div id="left">
+        <form action="/register" method="get">
+        <button type="submit">CREATE BLOCK</button>
+        </form>
+        <form action="/display" method="get">
+            <button type="submit">DISPLAY BLOCKCHAIN</button>
+        </form>
+        </div>
+
+        <div id="right">
+            <form action="/latestblock" method="get">
+                <button type="submit">GET LATEST BLOCK</button>
+            </form>
+        <form action="/isvalid" method="post">
+            <button type="submit">CHECK VALIDITY</button>
+        </form>
+   
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

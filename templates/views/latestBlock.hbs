@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details of latest block</title>
+    <style>
+        body{
+  font-family: 'Open Sans', sans-serif;
+  background:#ADDDD0;
+  margin: 0 auto 0 auto;  
+  width:100%; 
+  text-align:center;
+  margin: 20px 0px 20px 0px;   
+}
+
+p{
+  font-size:12px;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+h1{
+  font-size:1.5em;
+  color:#525252;
+}
+
+.box{
+  background:white;
+  width:400px;
+  border-radius:6px;
+  margin: 0 auto 0 auto;
+  padding:0px 0px 70px 0px;
+  border: #2980b9 4px solid; 
+}
+
+.email{
+  background:#ecf0f1;
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  padding: 8px;
+  width:350px;
+  color:#AAAAAA;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:4px;
+}
+
+.btn{
+  background:#2ecc71;
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:16px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+.btn:hover{
+  background:#2CC06B; 
+}
+
+#btn2{
+  float:left;
+  background:#3498db;
+  width:125px;  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #2980b9 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:10px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+#btn2:hover{ 
+background:#3594D2; 
+}
+
+    </style>
+</head>
+<body>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+
+<form method="post" action="index.html">
+<div class="box">
+<h1>Latest Block</h1>
+
+  <label>Block Number</label>
+<input type="text" class="email" value={{index}} />
+   <label>Timestamp</label>
+<input  class="email" value={{timestamp}} />
+   <label>Name</label>
+<input type="text"   class="email" value={{data.Name}} >
+   <label>Phone Number</label>
+<input type="text" class="email" value={{data.phone}}>
+    <label>Heart Rate</label>
+<input   class="email" value={{data.heartRate}}>
+    <label>Pressure</label>
+<input  class="email" value={{data.pressure}}>
+    <label>Nonce</label>
+<input  class="email" value={{nonce}}>
+    <label>PrevHash</label>
+<input  class="email" value={{previousHash}}>
+    <label>Hash</label>
+<input  class="email"value={{hash}}>
+  
+
+</div>
+  
+</form>
+
+
+
+</body>
+</html>

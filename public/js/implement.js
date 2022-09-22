@@ -30,7 +30,7 @@ class Blockchain{
     }
 
     createGenesisBlock(){
-        return new Block(0 , "8/07/2021" , "Genesis Block" , "0"); //we are manually initializing the first block and storing its preHash as 0 because it doesnot have any previous block. 
+        return new Block(0 , "8/07/2021" , {Name:"Genesis Block" } , "0"); //we are manually initializing the first block and storing its preHash as 0 because it doesnot have any previous block. 
     }
 
     getLatestBlock(){
@@ -45,7 +45,8 @@ class Blockchain{
 
     isValid(){    //method to check whether a blockchain is valid or not.
         
-        //looping from index 1 as first block is the genesis block          
+        //looping from index 1 as first block is the genesis block  
+         
         for(let i=1 ; i<this.chain.length; i++){  
             const prevBlock=this.chain[i-1];
             const currBlock=this.chain[i];
@@ -64,10 +65,13 @@ class Blockchain{
 }
 
 let coin=new Blockchain();
-console.log("Mining block 1..")
-coin.addBlock(new Block(1 , "9/07/2021" , { Name: 'Rahul' , phLevel: '7' ,  moistureLevel: '35'}));
-console.log("Mining Block 2..")
-coin.addBlock(new Block(2 , "11/07/2021" , {Name :  'Ajay' , phLevel:'3' , moistureLevel: '72'}));
+// console.log("Mining block 1..")
+// coin.addBlock(new Block(1 , "9/07/2021" , { Name: 'Rahul' , phone: '7' ,  moistureLevel: '35'}));
+// console.log("Mining Block 2..")
+// coin.addBlock(new Block(2 , "11/07/2021" , {Name :  'Ajay' , phLevel:'3' , moistureLevel: '72'}));
+//  console.log(coin.isValid() ? "true" : "false");
+// coin.chain[1].data={Name:'xyz'};
+//  console.log(coin.isValid() ? "true" : "false");
+// console.log(JSON.stringify(coin , null , 5));
 
-console.log(JSON.stringify(coin , null , 5));
-
+module.exports = {coin,Blockchain,Block}
