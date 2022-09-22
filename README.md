@@ -39,6 +39,14 @@ In this code, firstly we have created a class Block with several properties and 
    addBlock() : It adds new block to the chain.
    
    Isvalid() : It checks whether the blockchain is valid or not by comparing the previous hash of the current block with the hash of the previous block.
+
+   <h2> SNAPSHOTS </h2>
+
+   <h3> Home Page </h3>
+   <img src="./src/images/home.jpg">
+
+   <h3> Register Patient </h3>
+   <img src="./src/images/register.jpg">
    
    
    
