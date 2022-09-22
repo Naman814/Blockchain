@@ -1,19 +1,6 @@
 # Blockchain
 A Blockchain for storing health records of patients, it includes methods such as add block, get recent block, validate blockchain. Proof of Work (PoW) algorithm is also implemented to secure sequence Bitcoin's transaction history while increasing the difficulty of altering data over time.
 
-
-<b>
-How to run this project :
-
-1. clone the repository to your desired location.
-2. change directory to cloned repo.
-  (node js should be installed).
-3. In your terminal run : npm install 
-4. To run the code :  node implement.js
-5. output will be displayed in the terminal.
-
-</b>
-
 <h1>
 Working 
 </h1>
