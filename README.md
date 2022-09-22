@@ -47,6 +47,12 @@ In this code, firstly we have created a class Block with several properties and 
 
    <h3> Register Patient </h3>
    <img src="./src/images/register.jpg">
+
+   <h3> Fetch Most Recent Block</h3>
+   <img src="./src/images/latestBlock.jpg">
+
+   <h3> Fetch complete blockchain </h3>
+   <img src="./src/images/chain.jpg">
    
    
    
